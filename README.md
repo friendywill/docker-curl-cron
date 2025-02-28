@@ -2,13 +2,14 @@
 [![](https://images.microbadger.com/badges/version/jsonfry/curl-cron.svg)](https://microbadger.com/images/jsonfry/s3-sync "Get your own version badge on microbadger.com")
 
 
-# jsonfry/curl-cron
+# friendywill/curl-cron
+## From: jsonfry/curl-cron
 
 Docker image that runs periodically runs a curl command
 
 ## Usage
 
-    docker run -d [OPTIONS] jsonfry/curl-cron
+    docker run -d [OPTIONS] friendywill/curl-cron
 
 
 ### Required Parameters:
@@ -27,11 +28,11 @@ Run every hour with cron schedule (container keeps running):
     docker run -d \
         -e OPTIONS=example.com \
         -e CRON_SCHEDULE="0 1 * * *" \
-        jsonfry/curl-cron
+        friendywill/curl-cron
 
 Run just once (container is deleted afterwards):
 
     docker run --rm \
         -e OPTIONS=example.com \
-        jsonfry/curl-cron now
+        friendywill/curl-cron now
 
